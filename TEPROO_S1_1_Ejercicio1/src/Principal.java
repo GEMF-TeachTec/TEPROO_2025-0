@@ -20,7 +20,7 @@ public class Principal {
 		categoria = scan.next().charAt(0);		//Leer el primer caracter de la cadena ingresada
 		categoria = Character.toUpperCase(categoria);	//Convertir el caracter a mayúscula
 		
-		scan.close();
+		scan.close();		//Cerrar el scanner
 		
 		//Proceso
 		//Determinar tarifa horaria
