@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class Principal {
@@ -16,10 +15,7 @@ public class Principal {
 		
 		System.out.print("Ingrese las horas trabajadas: ");
 		horasTrabajadas = scan.nextInt();
-		//scan.nextLine(); //Para consumir el caracter de salto de línea del entero
-		
-		//System.out.print("Ingrese la tarifa horaria: ");
-		//tarifaHora = scan.nextFloat();
+
 		System.out.print("Ingrese la categoría: ");
 		categoria = scan.next().charAt(0);
 		categoria = Character.toUpperCase(categoria);
@@ -60,8 +56,10 @@ public class Principal {
 		//Calcular sueldo neto
 		sueldoNeto = sueldoBruto - descuento;
 		
+		//Generar el lanzamiento del dado
 		ruleta = 1 + (int) (Math.random() * (6-1) + 1);
 		
+		//Determinar el obsequio correspondiente
 		switch(ruleta) {
 		case 1: 
 			bonificacion = "Vale S/. 50"; 
@@ -79,7 +77,6 @@ public class Principal {
 		default: 
 			bonificacion = "Vale S/. 200"; 
 		}
-
 		
 		//Salida de resultados
 		System.out.printf("Tarifa: %c\n", categoria);
@@ -89,5 +86,4 @@ public class Principal {
 		System.out.printf("Sueldo bruto: %,.2f\n", sueldoNeto);
 		System.out.printf("Bonificación (%d): %s\n", ruleta, bonificacion);
 	}
-
 }
