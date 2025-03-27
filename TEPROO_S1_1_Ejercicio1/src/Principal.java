@@ -17,8 +17,8 @@ public class Principal {
 		horasTrabajadas = scan.nextInt();
 
 		System.out.print("Ingrese la categoría: ");
-		categoria = scan.next().charAt(0);
-		categoria = Character.toUpperCase(categoria);
+		categoria = scan.next().charAt(0);		//Leer el primer caracter de la cadena ingresada
+		categoria = Character.toUpperCase(categoria);	//Convertir el caracter a mayúscula
 		
 		scan.close();
 		
